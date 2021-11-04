@@ -148,9 +148,6 @@ looker.plugins.visualizations.add({
 	update: function(data, element, config, queryResponse){
 		
 		var numGrids = $('.myGrid').length;
-		if(!d3.select(".myGrid:nth-child("+numGrids+")").empty()){
-			d3.selectAll(".myGrid:nth-child("+numGrids+")").remove(); 
-		}
 
 		$(".parentGrid").closest(".grid-element").fadeIn();
 
@@ -272,13 +269,6 @@ looker.plugins.visualizations.add({
 				});
 				rowData.push(currObj);			
 			};
-
-			var body = d3.selectAll('.parentGrid')
-				    .append('div')
-				    .attr('class','myGrid ' +  config.theme)
-				    //.attr('class',config.theme)
-				    .style('width','100%')
-				    .style('height','100%');
 
 			// specify the data
 			var expand = -1;
