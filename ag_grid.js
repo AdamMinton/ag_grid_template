@@ -346,3 +346,4 @@ function numberFormatter(params) {
 function onFirstDataRendered(params) {
     params.api.sizeColumnsToFit();
 }
+
